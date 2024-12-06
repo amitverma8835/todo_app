@@ -18,7 +18,7 @@ function Login() {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:4000/api/login", { email: loginEmail, password: loginPassword });
+      const result = await axios.post("https://todo-app-backend-77vj.onrender.com/api/login", { email: loginEmail, password: loginPassword });
       console.log("Login successful", result.data);
       alert('Login Successfully')
       navigate("/home");
